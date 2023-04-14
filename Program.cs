@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        var dataset = new AndDataset();
+        var dataset = new OrDataset();
         var perceptron = new SingleLayerPerceptron(2);
 
         perceptron.Fit(dataset);
