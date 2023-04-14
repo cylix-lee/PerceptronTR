@@ -50,16 +50,20 @@ f(x)= \left\{
 
 3. 计算网络的实际输出：
 ```math
-y(t)=f\left( \sum_{i=1}^nw_i(t)x_i(t)-\theta(t) \right) \qquad(i=1,\space 2,\space \cdots,\space n)
+\begin{align}
+y(t)=f\left( \sum_{i=1}^nw_i(t)x_i(t)-\theta(t) \right) \\ (i=1,\space 2,\space \cdots,\space n)
+\end{align}
 ```
 
 4. 若 $y(t)=d(t)$ ，不需要调整连接权值，转到第 6 步；否则需要调整连接权值，执行第 5 步。
 
 5. 调整连接权值：
 ```math
-w_i(t+1)=w_i(t)+\eta[d(t)-y(t)]x_i(t)\qquad(i=1,\space 2,\space \cdots,\space n)
+\begin{align}
+w_i(t+1)=w_i(t)+\eta[d(t)-y(t)]x_i(t)\\(i=1,\space 2,\space \cdots,\space n)
+\end{align}
 ```
-   式中，$0<\eta\le1$ ，是一个增益因子，用于控制修改速度。其值不能太大，也不能太小：如果 $\eta$ 的值太大，会影响 $w_i(t)$ 的收敛性；如果太小，又会使 $w_i(t)$ 的收敛速度太慢。
+   式中， $0<\eta\le1$ ，是一个增益因子，用于控制修改速度。其值不能太大，也不能太小：如果 $\eta$ 的值太大，会影响 $w_i(t)$ 的收敛性；如果太小，又会使 $w_i(t)$ 的收敛速度太慢。
 
 6. 判断是否满足结束条件，若满足，算法结束；否则，将 $t$ 值加 $1$ ，转第 2 步重新执行。这里的结束条件一般指 $w_i(t)$ 对一切样本均稳定不变。
 
