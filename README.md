@@ -1,9 +1,5 @@
 # 使用单层感知机实现“或”运算
 
-<div style="text-align: center">
-    20 网络工程 2 班&emsp;李政翱
-</div>
-
 ---
 
 ## 目录
