@@ -72,10 +72,8 @@ w_i(t+1)=w_i(t)+\eta[d(t)-y(t)]x_i(t)\\(i=1,\space 2,\space \cdots,\space n)
 本次作业采用 .NET 6 平台上的 `C#` 语言作为开发语言，使用 Visual Studio 2022 作为集成开发环境。项目采用多文件的组织结构，如下图所示：
 
 ![image-20230414210318968](assets/项目结构.png)
+*项目组织结构*
 
-<div style="text-align: center">
-    <small>项目组织结构</small>
-</div>
 
 其中：
 
@@ -557,9 +555,8 @@ static class ToStringExtension
 
 <img src="assets/初始化直接拟合.png" alt="image-20230414215945540" style="zoom:50%;" />
 
-<div style="text-align: center">
-    <small>初始化后模型直接拟合的情况</small>
-</div>
+*初始化后模型直接拟合的情况*
+
 
 ### 反向传播后拟合
 
@@ -567,15 +564,17 @@ static class ToStringExtension
 
 <img src="assets/训练后拟合.png" alt="image-20230414220115571" style="zoom:50%;" />
 
-<div style="text-align: center">
-    <small>多轮训练后拟合的情况</small>
-</div>
+*多轮训练后拟合的情况*
+
 
 ### 指定训练轮次使其未完全拟合
 
 在本项目中，可以在模型训练时指定较小的训练轮次，使得其有概率出现未完全拟合的情况。下图是指定训练轮次为 2 从而使得模型最终准确率仅为 75% 的情况。
 
 <img src="assets/未完全拟合.png" alt="image-20230414220426126" style="zoom:50%;" />
+
+*未完全拟合*
+
 
 ### 应用“且”数据集
 
@@ -595,9 +594,8 @@ var dataset = new AndDataset();
 
 <img src="assets/求解且问题.png" alt="image-20230414220652926" style="zoom:50%;" />
 
-<div style="text-align: center">
-    <small>求解“且”问题</small>
-</div>
+*求解“且”问题*
+
 
 <div class="breaker" />
 
